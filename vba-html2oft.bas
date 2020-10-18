@@ -20,8 +20,8 @@ Sub CreateEmailFromFile()
 
          If .Show = -1 Then
             For Each filePath In .SelectedItems
-                strFileContent = fReadFile(filePath)
-                Call fCreateEmail(strFileContent)
+                fileContent = fReadFile(filePath)
+                Call fCreateEmail(fileContent)
                 fileName = fs.GetBaseName(filePath)
             Next
          End If
@@ -50,7 +50,7 @@ Sub SaveEmail()
         Exit Sub
     End If
     
-    filename = ""
+    fileName = ""
     Set thisMail = Nothing
 
 End Sub
